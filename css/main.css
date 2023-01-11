@@ -26,6 +26,20 @@ li {
   padding: 0;
 }
 
+.header .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem .8rem;
+}
+
+.header .header__open-menu {
+  height: 1.2rem;
+}
+
 .header .header__nav {
   display: none;
 }
