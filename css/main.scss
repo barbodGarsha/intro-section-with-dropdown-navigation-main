@@ -92,31 +92,81 @@ li {
 }
 
 .hero {
+    display: flex;
+    flex-direction: column-reverse;
     .hero__info {
+        padding: 1.5rem .8rem;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
     }
 
     
     .hero__title {
-            
+        color: $c-almost-black;
+
+        font-family: 'Epilogue';
+        font-weight: 700;
+        font-size: 2.44rem;
+        text-align: center;
+
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        .hero__br {
+            display: none;
+        }
     }
     
     .hero__txt {
+        color: $c-medium-gray;
+        
+        font-family: 'Epilogue';
+        font-weight: 500;
+        font-size: 1.1rem;
 
+        text-align: center;
+        line-height: 1.8rem;
+
+        margin-bottom: 2rem;
     }
 
     .hero__btn {
+        color: $c-almost-White;
+        background-color: $c-almost-black;
+        
+        font-family: 'Epilogue';
+        font-weight: 500;
+        font-size: 1.1rem;
+
+        border-radius: 15px;
+
+        padding: .85rem 1.4rem;
+        margin-bottom: 2.5rem;
 
     }
 
     .hero__clients {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: .8rem;
         .hero__clients__img {
-
+            height: 1rem;
+        }
+        .hero__clients__img--XL {
+            height: 1.7rem;
+        }
+        .hero__clients__img--L {
+            height: 1.1rem;
         }
     }
     .hero__design {
-
+        width: 100vw;
         .hero__design__img {
-
+            content: url('../images/image-hero-mobile.png');
+            width: 100%;
         }
     }
 }
