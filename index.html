@@ -16,18 +16,18 @@
 
   <link rel="stylesheet" href="./css/main.css">
 
-  <script src="./js/main.js"></script>
+  <script src="./js/main.js" defer></script>
 </head>
 <body>
-  <div class="shadow"></div>
+  <div class="shadow pre-load--hide" data-shadow data-pre-load-hide></div>
   <header class="header">
     <div class="header__container">
       <img src="./images/logo.svg" alt="Logo" class="header__logo">
-      <img src="./images/icon-menu.svg" alt="Open Menu" class="header__open-menu">
-      <div class="header__nav">
+      <img src="./images/icon-menu.svg" alt="Open Menu" class="header__open-menu" data-header-open-menu>
+      <div class="header__nav pre-load--hide" data-header-nav data-pre-load-hide>
         <div class="header__nav__container">
           <div class="header__close-menu-container">
-            <img src="./images/icon-close-menu.svg" alt="Close Menu" class="header__close-menu">
+            <img src="./images/icon-close-menu.svg" alt="Close Menu" class="header__close-menu" data-header-close-menu>
           </div>
           <ul class="header__nav__menu">
             <li class="header__nav__menu__item">Features 

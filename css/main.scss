@@ -6,6 +6,9 @@ $c-medium-gray: hsl(0, 0%, 41%);
 $c-almost-black: hsl(0, 0%, 8%);
 
 // Resets ===============================================
+html {
+    overflow-x: hidden;
+}
 body {
     position: relative;
     margin: 0;
@@ -13,7 +16,8 @@ body {
     font-family: sans-serif;
     font-size: 18px;
     min-height:100vh;
-    max-width: 100vw;
+    max-width: 100vw; 
+    overflow-x: hidden;
 }
 a, li, h1, h2, p {
     text-decoration: none;
@@ -36,12 +40,23 @@ li {
 
 // Main ===============================================
 
+.pre-load--hide {
+    display: none;
+}
+
 .shadow {
+    pointer-events: none;
     background-color: black;
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 500ms;
+}
+.shadow--visible {
+    visibility: visible;
     opacity: .64;
 }
 
@@ -136,6 +151,14 @@ li {
         .header__nav__actions {
             margin-top: .8rem;
         }
+
+        opacity: 1;
+        transform: translateX(100%);
+        transition: 500ms; 
+    }
+    .header__nav--open {
+        opacity: 1;
+        transform: translateX(0%);
 
     }
 
