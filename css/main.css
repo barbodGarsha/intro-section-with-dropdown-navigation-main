@@ -108,6 +108,7 @@ li {
 }
 
 .header .header__nav .header__nav__menu .header__nav__menu__item .header__nav__menu__item__arrow {
+  pointer-events: none;
   content: url("../images/icon-arrow-up.svg");
   margin-left: .6rem;
 }
