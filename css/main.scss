@@ -113,12 +113,15 @@ li {
                 padding: .8rem 0;
 
                 .header__nav__menu__item__arrow {
+                    content: url('../images/icon-arrow-up.svg');
                     margin-left: .6rem;
 
                 }
 
                 .header__nav__menu__item__sub {
+                    overflow: hidden;
                     display: block;
+                    max-height: 250px;
                     margin-top: 1rem;
                     .header__nav__menu__item__sub__item {
                         position: relative;
@@ -144,6 +147,17 @@ li {
                     .header__nav__menu__item__sub__item--has-icon {
                         margin-left: 3.3rem;
                     }
+                    transition: 500ms;
+                }
+                
+            }
+            .header__nav__menu__item--sub-closed {
+                .header__nav__menu__item__arrow {
+                    content: url('../images/icon-arrow-down.svg');
+                }
+                .header__nav__menu__item__sub {
+                    max-height: 0;
+                    margin-top: 0;
                 }
             }
         }

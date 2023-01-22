@@ -108,12 +108,17 @@ li {
 }
 
 .header .header__nav .header__nav__menu .header__nav__menu__item .header__nav__menu__item__arrow {
+  content: url("../images/icon-arrow-up.svg");
   margin-left: .6rem;
 }
 
 .header .header__nav .header__nav__menu .header__nav__menu__item .header__nav__menu__item__sub {
+  overflow: hidden;
   display: block;
+  max-height: 250px;
   margin-top: 1rem;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .header .header__nav .header__nav__menu .header__nav__menu__item .header__nav__menu__item__sub .header__nav__menu__item__sub__item {
@@ -138,6 +143,15 @@ li {
 
 .header .header__nav .header__nav__menu .header__nav__menu__item .header__nav__menu__item__sub .header__nav__menu__item__sub__item--has-icon {
   margin-left: 3.3rem;
+}
+
+.header .header__nav .header__nav__menu .header__nav__menu__item--sub-closed .header__nav__menu__item__arrow {
+  content: url("../images/icon-arrow-down.svg");
+}
+
+.header .header__nav .header__nav__menu .header__nav__menu__item--sub-closed .header__nav__menu__item__sub {
+  max-height: 0;
+  margin-top: 0;
 }
 
 .header .header__nav .header__nav__actions {
