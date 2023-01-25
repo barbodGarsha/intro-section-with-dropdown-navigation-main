@@ -195,8 +195,11 @@ li {
 }
 
 .hero {
-    display: flex;
-    flex-direction: column-reverse;
+
+    .hero__container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
     .hero__info {
         padding: 1.5rem .8rem;
         display: flex;
@@ -271,5 +274,225 @@ li {
             content: url('../images/image-hero-mobile.png');
             width: 100%;
         }
+    }
+}
+
+@media screen and (min-width: 1440px) { 
+    
+    .header {
+        .header__container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 1.5rem 2.5rem;
+        }
+    
+        .header__logo {
+            width: 5.25rem;
+            margin-right: 4rem;
+            
+        }
+    
+        .header__open-menu {
+            display: none;
+        }
+    
+        .header__close-menu-container {
+            display: none;
+        }
+    
+        .header__nav {
+            background-color: white;
+    
+            
+            position: relative;
+            z-index: 99999;
+            
+            width: 100%;
+    
+            .header__nav__container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+            }
+    
+            .header__nav__menu {
+    
+                display: flex;
+                .header__nav__menu__item {
+                    position: relative;
+    
+                    display: block;
+                    font-size: .9rem;
+    
+                    padding: .8rem 0;
+                    margin-right: 1.9rem;
+
+                    .header__nav__menu__item__arrow {
+                        pointer-events: none;
+                        content: url('../images/icon-arrow-up.svg');
+                        margin-left: .1rem;
+    
+                    }
+    
+                    .header__nav__menu__item__sub {
+                        background-color: white;
+                        position: absolute;
+
+                        border-radius: 9px;
+                        box-shadow: 20px 20px 50px grey;
+                        top: 1rem;
+                        left: 0;
+                        overflow: hidden;
+                        display: flex;
+                        flex-direction: column;
+                        width: auto;
+                        max-height: 250px;
+                        .header__nav__menu__item__sub__item {
+                            position: relative;
+                            color: $c-medium-gray;
+    
+                            font-family: 'Epilogue';
+                            font-size: .9rem;
+
+                            white-space: nowrap;
+                            display: block;
+                            padding: .8rem 0;
+                            margin-left: 0;
+    
+                            .header__nav__menu__item__sub__item__icon {
+                                position: absolute;
+                                left: -1.5rem;
+                                
+                                transform: translate(-50%, -25%);
+                                height: 1.25rem;
+                                transform-origin: center;
+                            }
+                        }
+                        .header__nav__menu__item__sub__item--has-icon {
+                            margin-left: 2.2rem;
+                        }
+                        transition: 500ms;
+                        .header__nav__menu__item__sub__container {
+                            padding: .8rem 1.5rem;
+                        }
+                    }
+                    .header__nav__menu__item--sub-align-right {
+                        left: unset;
+                        right: 0;
+                    }
+                }
+                .header__nav__menu__item--sub-closed {
+                    .header__nav__menu__item__arrow {
+                        content: url('../images/icon-arrow-down.svg');
+                    }
+                    .header__nav__menu__item__sub {
+                        max-height: 0;
+                        margin-top: 0;
+                    }
+                }
+            }
+    
+            .header__nav__actions {
+                display: flex;
+                margin-top: 0;
+            }
+            transform: translateX(0);
+            transition: 0; 
+        }
+    
+        .header__btn {
+            color: $c-medium-gray;
+            font-family: 'Epilogue';
+            font-size: .9rem;
+            display: block;
+            text-align: center;
+    
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+        }
+        .header__btn--has-outline {
+            border: solid 2px $c-medium-gray;
+            border-radius: 15px;
+
+            margin-left: 1rem;
+        }
+        
+    }
+
+    .hero {
+        
+        .hero__container {
+            flex-direction: row;
+            padding: 0 9rem;
+            padding-top: 3.5rem;
+        }
+
+        .hero__info {
+            padding-bottom: 0;
+            padding-right: 9rem;
+            display: flex;
+            flex-direction: column;
+    
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    
+        
+        .hero__title {
+            font-size: 4.8rem;
+            text-align: left;
+    
+            margin-top: 5rem;
+            margin-bottom: -1.5rem;
+            .hero__br {
+                display: block;
+            }
+        }
+        
+        .hero__txt {
+           
+            font-size: 1.2rem;
+
+            text-align: left;
+    
+            margin-bottom: 0rem;
+        }
+    
+        .hero__btn {
+         
+            font-size: 1.2rem;
+    
+            padding: 1rem 1.4rem;
+            margin-bottom: 2rem;
+    
+        }
+    
+        .hero__clients {
+            padding-bottom: 0;
+            .hero__clients__img {
+                height: 1.25rem;
+            }
+            .hero__clients__img--XL {
+                height: 2.125rem;
+            }
+            .hero__clients__img--L {
+                height: 1.5rem;
+                margin-right: 1rem;
+            }
+        }
+        .hero__design {
+            width: auto; 
+            .hero__design__img {
+                content: url('../images/image-hero-desktop.png');
+                height: 40rem;
+                width: auto;
+            }
+        }
+    }
+    
+    .footer {
+        margin-top: 10rem;
     }
 }

@@ -180,7 +180,7 @@ li {
   border-radius: 15px;
 }
 
-.hero {
+.hero .hero__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,5 +272,214 @@ li {
 .hero .hero__design .hero__design__img {
   content: url("../images/image-hero-mobile.png");
   width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  .header .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1.5rem 2.5rem;
+  }
+  .header .header__logo {
+    width: 5.25rem;
+    margin-right: 4rem;
+  }
+  .header .header__open-menu {
+    display: none;
+  }
+  .header .header__close-menu-container {
+    display: none;
+  }
+  .header .header__nav {
+    background-color: white;
+    position: relative;
+    z-index: 99999;
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: 0;
+    transition: 0;
+  }
+  .header .header__nav .header__nav__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  .header .header__nav .header__nav__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .header__nav .header__nav__menu .header__nav__menu__item {
+    position: relative;
+    display: block;
+    font-size: .9rem;
+    padding: .8rem 0;
+    margin-right: 1.9rem;
+  }
+  .header .header__nav .header__nav__menu .header__nav__menu__item .header__nav__menu__item__arrow {
+    pointer-events: none;
+    content: url("../images/icon-arrow-up.svg");
+    margin-left: .1rem;
+  }
+  .header .header__nav .header__nav__menu .header__nav__menu__item .header__nav__menu__item__sub {
+    background-color: white;
+    position: absolute;
+    border-radius: 9px;
+    -webkit-box-shadow: 20px 20px 50px grey;
+            box-shadow: 20px 20px 50px grey;
+    top: 1rem;
+    left: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto;
+    max-height: 250px;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
+  .header .header__nav .header__nav__menu .header__nav__menu__item .header__nav__menu__item__sub .header__nav__menu__item__sub__item {
+    position: relative;
+    color: dimgray;
+    font-family: 'Epilogue';
+    font-size: .9rem;
+    white-space: nowrap;
+    display: block;
+    padding: .8rem 0;
+    margin-left: 0;
+  }
+  .header .header__nav .header__nav__menu .header__nav__menu__item .header__nav__menu__item__sub .header__nav__menu__item__sub__item .header__nav__menu__item__sub__item__icon {
+    position: absolute;
+    left: -1.5rem;
+    -webkit-transform: translate(-50%, -25%);
+            transform: translate(-50%, -25%);
+    height: 1.25rem;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  .header .header__nav .header__nav__menu .header__nav__menu__item .header__nav__menu__item__sub .header__nav__menu__item__sub__item--has-icon {
+    margin-left: 2.2rem;
+  }
+  .header .header__nav .header__nav__menu .header__nav__menu__item .header__nav__menu__item__sub .header__nav__menu__item__sub__container {
+    padding: .8rem 1.5rem;
+  }
+  .header .header__nav .header__nav__menu .header__nav__menu__item .header__nav__menu__item--sub-align-right {
+    left: unset;
+    right: 0;
+  }
+  .header .header__nav .header__nav__menu .header__nav__menu__item--sub-closed .header__nav__menu__item__arrow {
+    content: url("../images/icon-arrow-down.svg");
+  }
+  .header .header__nav .header__nav__menu .header__nav__menu__item--sub-closed .header__nav__menu__item__sub {
+    max-height: 0;
+    margin-top: 0;
+  }
+  .header .header__nav .header__nav__actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0;
+  }
+  .header .header__btn {
+    color: dimgray;
+    font-family: 'Epilogue';
+    font-size: .9rem;
+    display: block;
+    text-align: center;
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+  }
+  .header .header__btn--has-outline {
+    border: solid 2px dimgray;
+    border-radius: 15px;
+    margin-left: 1rem;
+  }
+  .hero .hero__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0 9rem;
+    padding-top: 3.5rem;
+  }
+  .hero .hero__info {
+    padding-bottom: 0;
+    padding-right: 9rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .hero .hero__title {
+    font-size: 4.8rem;
+    text-align: left;
+    margin-top: 5rem;
+    margin-bottom: -1.5rem;
+  }
+  .hero .hero__title .hero__br {
+    display: block;
+  }
+  .hero .hero__txt {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 0rem;
+  }
+  .hero .hero__btn {
+    font-size: 1.2rem;
+    padding: 1rem 1.4rem;
+    margin-bottom: 2rem;
+  }
+  .hero .hero__clients {
+    padding-bottom: 0;
+  }
+  .hero .hero__clients .hero__clients__img {
+    height: 1.25rem;
+  }
+  .hero .hero__clients .hero__clients__img--XL {
+    height: 2.125rem;
+  }
+  .hero .hero__clients .hero__clients__img--L {
+    height: 1.5rem;
+    margin-right: 1rem;
+  }
+  .hero .hero__design {
+    width: auto;
+  }
+  .hero .hero__design .hero__design__img {
+    content: url("../images/image-hero-desktop.png");
+    height: 40rem;
+    width: auto;
+  }
+  .footer {
+    margin-top: 10rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
